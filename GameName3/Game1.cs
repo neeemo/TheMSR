@@ -92,14 +92,33 @@ namespace GameName3
             float scrollSpeed = 8.0f;
 
             //Events is the object layer, player is the object.
-            map.ObjectGroups["events"].Objects["player"].X += (int)(scrollx * scrollSpeed);
-            map.ObjectGroups["events"].Objects["player"].Y -= (int)(scrolly * scrollSpeed);
-            //map.ObjectGroups["events"].Objects["player"].Width = 100;
+            Squared.Tiled.Object player = map.ObjectGroups["events"].Objects["player"];
 
-            //TODO: ViewportPosition should only scroll if you are moving towards the border of the screen,
-            //also limit so that you cannot see outside of the map. use tilesize somehow.
-            viewportPosition.X += scrollx * scrollSpeed;
-            viewportPosition.Y -= scrolly * scrollSpeed;
+            Squared.Tiled.ObjectGroup wallCollision = map.ObjectGroups["collision"];
+
+            //Testing collsion concept. Works but gets stuck cause playerrect goes into rect.
+            Rectangle playerRect = new Rectangle(player.X, player.Y, player.Width, player.Height);
+            Rectangle rect = new Rectangle(wallCollision.Objects["wall1"].X, wallCollision.Objects["wall1"].Y, wallCollision.Objects["wall1"].Width, wallCollision.Objects["wall1"].Height);
+
+            if (!playerRect.Intersects(rect))
+            {
+
+
+                player.X += (int)(scrollx * scrollSpeed);
+                player.Y -= (int)(scrolly * scrollSpeed);
+                //map.ObjectGroups["events"].Objects["player"].Width = 100;
+
+                //TODO: ViewportPosition should only scroll if you are moving towards the border of the screen,
+                //also limit so that you cannot see outside of the map. use tilesize somehow.
+                viewportPosition.X += scrollx * scrollSpeed;
+                viewportPosition.Y -= scrolly * scrollSpeed;
+
+            }
+            else
+            {
+                Console.WriteLine("Collision!");
+            }
+
 
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
