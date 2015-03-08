@@ -1,52 +1,7 @@
 ﻿/*
 Squared.Tiled
 Copyright (C) 2009 Kevin Gadd
-
-  This software is provided 'as-is', without any express or implied
-  warranty.  In no event will the authors be held liable for any damages
-  arising from the use of this software.
-
-  Permission is granted to anyone to use this software for any purpose,
-  including commercial applications, and to alter it and redistribute it
-  freely, subject to the following restrictions:
-
-  1. The origin of this software must not be misrepresented; you must not
-     claim that you wrote the original software. If you use this software
-     in a product, an acknowledgment in the product documentation would be
-     appreciated but is not required.
-  2. Altered source versions must be plainly marked as such, and must not be
-     misrepresented as being the original software.
-  3. This notice may not be removed or altered from any source distribution.
-
-  Kevin Gadd kevin.gadd@gmail.com http://luminance.org/
 */
-/*
- * Updates by Stephen Belanger - July, 13 2009
- * 
- * -added ProhibitDtd = false, so you don't need to remove the doctype line after each time you edit the map.
- * -changed everything to use SortedLists for easier referencing
- * -added objectgroups
- * -added movable and resizable objects
- * -added object images
- * -added meta property support to maps, layers, object groups and objects
- * -added non-binary encoded layer data
- * -added layer and object group transparency
- * 
- * TODO: I might add support for .tsx Tileset definitions. Note sure yet how beneficial that would be...
-*/
-/*
- * Modifications by Zach Musgrave - August 2012.
- * 
- * - Fixed errors in TileExample.cs
- * - Added support for rotated and flipped tiles (press Z, X, or Y in Tiled to rotate or flip tiles)
- * - Fixed exception when loading an object without a height or width attribute
- * - Fixed property loading bugs (properties now loaded for Layers, Maps, Objects)
- * - Added support for margin and spacing in tile sets
- * - CF-compatible System.IO.Compression library available via GitHub release. See releases at https://github.com/zachmu/tiled-xna
- * 
- * Zach Musgrave zach.musgrave@gmail.com http://gamedev.sleptlate.org
- */
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
