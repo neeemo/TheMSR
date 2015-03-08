@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="32" tileheight="32" nextobjectid="2">
+ <tileset firstgid="1" name="tiles" tilewidth="32" tileheight="32">
+  <image source="tiles.png" width="256" height="32"/>
+ </tileset>
+ <layer name="floor" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3PoQEAMAjEwMd0/5EZAVwFJ84nlaQAAAAAAAAAABi9hd+NPnz44LIG9cSnHhAnAAA=
+  </data>
+ </layer>
+ <layer name="wall" width="50" height="50">
+  <properties>
+   <property name="layermeta" value="layervalue"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WQQqAMAxE0ULvf2e3boRUM+k0/g+zEQm8lc4xxmSWOyEcXnVx3MPhVXeH23B47a1jVzhwqMOBQxEOHIpw5Die7qz8Tzl8B3Gc58gOR+xm5HlGlQ5lOGI3q8IRu1mV2qEcjn85MsKBQxEOX8fq+x0du004+jsY+7IL0XK2RBAnAAA=
+  </data>
+ </layer>
+ <layer name="path" width="50" height="50">
+  <properties>
+   <property name="layermeta" value="layervalue1"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YQQqAIBQAUTfe/8ptJSJ/Gvod5oGrshx0ZSmSvqjNOFntjMjc0eer3NfRa27ff5v79K0sZtaSrWUGqYWGtDekDlILAaGDcq4IDcqFcqZIHYQWO3KhNOzq+PO/O/fCc5DLbEeW+5/oGkbv+1aK3s1JkiRJkjTqApvJuHcQJwAA
+  </data>
+ </layer>
+ <objectgroup name="events">
+  <object id="1" name="player" x="202" y="132" width="60" height="58"/>
+ </objectgroup>
+</map>
